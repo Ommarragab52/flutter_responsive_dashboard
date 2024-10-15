@@ -13,7 +13,6 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
       padding: const EdgeInsets.all(28),
       color: Colors.white,
       child: CustomScrollView(
@@ -27,7 +26,7 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
-          DrawerItemsList(items: drawerItemsList),
+          const DrawerItemsList(items: drawerItems),
           SliverFillRemaining(
               hasScrollBody: false,
               child: Column(
@@ -35,7 +34,7 @@ class CustomDrawer extends StatelessWidget {
                 children: [
                   Flexible(
                     child: DrawerItem(
-                      drawerModel: DrawerModel(
+                      drawerModel: const DrawerModel(
                         title: 'Setting system',
                         icon: Assets.imagesSettings,
                       ),
@@ -44,7 +43,7 @@ class CustomDrawer extends StatelessWidget {
                   ),
                   Flexible(
                     child: DrawerItem(
-                      drawerModel: DrawerModel(
+                      drawerModel: const DrawerModel(
                         title: 'Logout account',
                         icon: Assets.imagesLogout,
                       ),

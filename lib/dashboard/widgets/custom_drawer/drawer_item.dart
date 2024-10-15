@@ -30,9 +30,8 @@ class DrawerItem extends StatelessWidget {
       ),
       leading: SvgPicture.asset(drawerModel.icon),
       trailing: isSelected
-          ? const VerticalDivider(
-              width: 1,
-              thickness: 3,
+          ? Container(
+              width: 3.27,
               color: AppColors.primaryColor,
             )
           : null,
