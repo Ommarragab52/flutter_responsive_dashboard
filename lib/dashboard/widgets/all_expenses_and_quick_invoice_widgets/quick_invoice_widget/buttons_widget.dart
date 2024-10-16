@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dashboard/dashboard/widgets/expenses_widget/quick_invoice/add_more_detaisl_button.dart';
-import 'package:flutter_dashboard/dashboard/widgets/expenses_widget/quick_invoice/send_money_button.dart';
+import 'package:flutter_dashboard/dashboard/widgets/all_expenses_and_quick_invoice_widgets/quick_invoice_widget/add_more_detaisl_button.dart';
+import 'package:flutter_dashboard/dashboard/widgets/all_expenses_and_quick_invoice_widgets/quick_invoice_widget/send_money_button.dart';
 
 class ButtonsWidget extends StatelessWidget {
   const ButtonsWidget({

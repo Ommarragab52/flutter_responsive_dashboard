@@ -1,10 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/models/expenses_model.dart';
 import 'package:flutter_dashboard/core/utils/app_colors.dart';
 import 'package:flutter_dashboard/core/utils/app_styles.dart';
 import 'package:svg_flutter/svg.dart';
 
-class ExpensesItem extends StatelessWidget {
+class ExpensesItem extends StatefulWidget {
   final ExpensesModel item;
   final bool isSelected;
   final Function() onClick;
@@ -16,27 +18,35 @@ class ExpensesItem extends StatelessWidget {
   });
 
   @override
+  State<ExpensesItem> createState() => _ExpensesItemState();
+}
+
+class _ExpensesItemState extends State<ExpensesItem> {
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onClick,
+      onTap: () {
+        widget.onClick();
+      },
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
         decoration: ShapeDecoration(
-          color: isSelected ? AppColors.primaryColor : Colors.white,
+          color: widget.isSelected ? AppColors.primaryColor : Colors.white,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
               side: BorderSide(
-                color:
-                    isSelected ? AppColors.primaryColor : AppColors.borderColor,
+                color: widget.isSelected
+                    ? AppColors.primaryColor
+                    : AppColors.borderColor,
                 width: 1,
               )),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildItemHeader(item, isSelected),
+            buildItemHeader(widget.item, widget.isSelected),
             const SizedBox(height: 34),
-            buildItemBody(item, isSelected),
+            buildItemBody(widget.item, widget.isSelected),
           ],
         ),
       ),

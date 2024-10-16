@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/utils/app_constants.dart';
-import 'package:flutter_dashboard/dashboard/widgets/expenses_widget/quick_invoice/custom_title_text_form_field.dart';
+import 'package:flutter_dashboard/dashboard/widgets/all_expenses_and_quick_invoice_widgets/quick_invoice_widget/custom_title_text_form_field.dart';
 
 class TextFieldsList extends StatelessWidget {
   const TextFieldsList({

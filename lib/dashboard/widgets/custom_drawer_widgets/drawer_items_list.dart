@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/models/drawer_model.dart';
-import 'package:flutter_dashboard/dashboard/widgets/custom_drawer/drawer_item.dart';
+import 'package:flutter_dashboard/dashboard/widgets/custom_drawer_widgets/drawer_item.dart';
 
 class DrawerItemsList extends StatefulWidget {
   final List<DrawerModel> items;

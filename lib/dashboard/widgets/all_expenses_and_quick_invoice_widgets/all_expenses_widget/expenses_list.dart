@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/models/expenses_model.dart';
 import 'package:flutter_dashboard/core/utils/app_constants.dart';
-import 'package:flutter_dashboard/dashboard/widgets/expenses_widget/all_expenses/expenses_item.dart';
+import 'package:flutter_dashboard/dashboard/widgets/all_expenses_and_quick_invoice_widgets/all_expenses_widget/expenses_item.dart';
 
 class ExpensesList extends StatefulWidget {
   const ExpensesList({
