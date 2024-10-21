@@ -29,11 +29,10 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
   - `FittedBox`
   - `Expanded`
   - `Flexible`
-
-### Sliver Implementation
+#### Slivers
 - `SliverFillRemaining`
 - `SliverList`
-- Custom sliver widgets for optimized scrolling
+
 
 ### 📂 Project Structure
 
@@ -112,5 +111,8 @@ Reusable widget architecture
 | Desktop |
 |---------|
 |![mac_desktop](https://github.com/user-attachments/assets/a585b7e9-0a91-45f6-be17-7d20cdd245f3)|
+
+ https://github.com/user-attachments/assets/ccf51b95-5103-4aba-945b-e35b79e9bf60
+
 
 
