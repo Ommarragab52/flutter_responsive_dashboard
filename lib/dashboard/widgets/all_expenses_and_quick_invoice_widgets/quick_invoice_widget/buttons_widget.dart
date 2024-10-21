@@ -11,9 +11,9 @@ class ButtonsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        AddMoreDetaislButton(),
-        Spacer(),
-        SendMoneyButton(),
+        Expanded(child: AddMoreDetaislButton()),
+        SizedBox(width: 16),
+        Expanded(child: SendMoneyButton()),
       ],
     );
   }

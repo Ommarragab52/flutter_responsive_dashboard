@@ -22,7 +22,7 @@ class DrawerItem extends StatelessWidget {
       contentPadding: EdgeInsets.zero,
       title: Text(
         drawerModel.title,
-        style: AppStyles.styleBold16.copyWith(
+        style: AppStyles.styleBold16(context).copyWith(
           fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
           color:
               isSelected ? AppColors.primaryColor : AppColors.primaryTextColor,

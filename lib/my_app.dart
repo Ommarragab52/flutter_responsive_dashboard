@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/dashboard/dashboard_screen.dart';
 
@@ -6,9 +7,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DashboardScreen(),
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      home: const DashboardScreen(),
     );
   }
 }

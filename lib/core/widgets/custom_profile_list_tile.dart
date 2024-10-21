@@ -35,9 +35,9 @@ class _CustomProfileListTileState extends State<CustomProfileListTile> {
                 onTap: changeRotation,
                 child: SvgPicture.asset(widget.userInfo.imageUrl))),
         title: Text(widget.userInfo.name),
-        titleTextStyle: AppStyles.styleSemiBold16,
+        titleTextStyle: AppStyles.styleSemiBold16(context),
         subtitle: Text(widget.userInfo.email),
-        subtitleTextStyle: AppStyles.styleRegular14.copyWith(fontSize: 12),
+        subtitleTextStyle: AppStyles.styleRegular12(context),
       ),
     );
   }

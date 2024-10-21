@@ -2,28 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/utils/app_colors.dart';
 import 'package:flutter_dashboard/core/utils/app_styles.dart';
 
-class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({
+class CustomTextAndDropdownMenuHeaderWidget extends StatelessWidget {
+  const CustomTextAndDropdownMenuHeaderWidget({
     super.key,
+    required this.title,
+    required this.dropdownMenuItems,
   });
-
+  final String title;
+  final List<String> dropdownMenuItems;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'All Expenses',
-          style: AppStyles.styleSemiBold20,
+          title,
+          style: AppStyles.styleSemiBold20(context),
         ),
         const Expanded(child: SizedBox()),
-        const CustomDropDownMenu()
+        CustomDropDownMenu(
+          dropdownMenuItems: dropdownMenuItems,
+        )
       ],
     );
   }
 }
 
 class CustomDropDownMenu extends StatefulWidget {
-  const CustomDropDownMenu({super.key});
+  const CustomDropDownMenu({super.key, required this.dropdownMenuItems});
+  final List<String> dropdownMenuItems;
 
   @override
   State<CustomDropDownMenu> createState() => _CustomDropDownMenuState();
@@ -32,15 +38,14 @@ class CustomDropDownMenu extends StatefulWidget {
 class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
   @override
   Widget build(BuildContext context) {
-    List<String> items = ['Daily', 'Monthly', 'Yearly'];
-    String dropdownValue = items[0];
-
+    String dropdownValue = widget.dropdownMenuItems[0];
     return DropdownButtonFormField(
+      dropdownColor: Colors.white,
       icon: const Icon(
         Icons.keyboard_arrow_down,
         color: AppColors.primaryTextColor,
       ),
-      style: AppStyles.styleMedium16,
+      style: AppStyles.styleMedium16(context),
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
@@ -58,7 +63,7 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
           dropdownValue = value.toString();
         });
       },
-      items: items.map(
+      items: widget.dropdownMenuItems.map(
         (value) {
           return DropdownMenuItem(
             value: value,

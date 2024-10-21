@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/models/expenses_model.dart';
 import 'package:flutter_dashboard/core/utils/app_constants.dart';
@@ -16,27 +18,33 @@ class _ExpensesListState extends State<ExpensesList> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: expensesItems
-          .map((item) => Expanded(child: buildExpensesItem(item)))
-          .toList(),
+    return ScrollConfiguration(
+      behavior: const ScrollBehavior()
+          .copyWith(dragDevices: {PointerDeviceKind.mouse}),
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: expensesItems.length,
+        itemBuilder: (BuildContext context, int index) =>
+            _buildExpensesItem(expensesItems[index], index),
+      ),
     );
   }
 
-  Padding buildExpensesItem(ExpensesModel item) {
-    final index = expensesItems.indexOf(item);
+  Widget _buildExpensesItem(ExpensesModel item, int index) {
+    final isSelected = selectedIndex == index;
     return Padding(
       padding: EdgeInsets.only(left: index != 0 ? 12 : 0),
-      child: ExpensesItem(
-        item: item,
-        isSelected: selectedIndex == index,
-        onClick: () {
-          setState(() {
-            if (selectedIndex != index) {
+      child: AspectRatio(
+        aspectRatio: 0.8,
+        child: ExpensesItem(
+          item: item,
+          isSelected: isSelected,
+          onClick: () {
+            setState(() {
               selectedIndex = index;
-            }
-          });
-        },
+            });
+          },
+        ),
       ),
     );
   }

@@ -9,15 +9,16 @@ class AddMoreDetaislButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 53, vertical: 20),
-      child: TextButton(
-        onPressed: () {},
-        child: Text(
-          'Add more details',
-          style:
-              AppStyles.styleMedium16.copyWith(color: AppColors.primaryColor),
-        ),
+    return TextButton(
+      style: ButtonStyle(
+          fixedSize: const WidgetStatePropertyAll(Size.fromHeight(50)),
+          shape: WidgetStatePropertyAll(
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))),
+      onPressed: () {},
+      child: Text(
+        'Add more details',
+        style: AppStyles.styleSemiBold16(context)
+            .copyWith(color: AppColors.primaryColor),
       ),
     );
   }

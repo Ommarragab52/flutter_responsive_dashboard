@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/models/expenses_model.dart';
 import 'package:flutter_dashboard/core/utils/app_colors.dart';
@@ -46,7 +44,7 @@ class _ExpensesItemState extends State<ExpensesItem> {
           children: [
             buildItemHeader(widget.item, widget.isSelected),
             const SizedBox(height: 34),
-            buildItemBody(widget.item, widget.isSelected),
+            buildItemBody(context, widget.item, widget.isSelected),
           ],
         ),
       ),
@@ -58,15 +56,19 @@ Row buildItemHeader(ExpensesModel item, bool isSelected) {
   return Row(
     children: [
       CircleAvatar(
-          radius: 32,
+          radius: 26,
           backgroundColor: isSelected
               ? Colors.white.withOpacity(0.1)
               : Colors.black.withOpacity(0.02),
           child: SvgPicture.asset(
             item.image,
-            color: isSelected ? Colors.white : AppColors.primaryColor,
-            width: 32,
-            height: 32,
+            fit: BoxFit.scaleDown,
+            colorFilter: isSelected
+                ? const ColorFilter.mode(Colors.white, BlendMode.srcIn)
+                : const ColorFilter.mode(
+                    AppColors.primaryColor,
+                    BlendMode.srcIn,
+                  ),
           )),
       const Spacer(),
       Icon(
@@ -78,27 +80,27 @@ Row buildItemHeader(ExpensesModel item, bool isSelected) {
   );
 }
 
-Column buildItemBody(ExpensesModel item, bool isSelected) {
+Column buildItemBody(context, ExpensesModel item, bool isSelected) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
         item.expensesType,
-        style: AppStyles.styleSemiBold16.copyWith(
+        style: AppStyles.styleSemiBold16(context).copyWith(
           color: isSelected ? Colors.white : AppColors.primaryTextColor,
         ),
       ),
       const SizedBox(height: 8),
       Text(
         item.date,
-        style: AppStyles.styleRegular14.copyWith(
+        style: AppStyles.styleRegular14(context).copyWith(
           color: isSelected ? Colors.white : AppColors.secondaryTextColor,
         ),
       ),
       const SizedBox(height: 16),
       Text(
         item.amount,
-        style: AppStyles.styleSemiBold20.copyWith(
+        style: AppStyles.styleSemiBold20(context).copyWith(
           fontWeight: FontWeight.w600,
           color: isSelected ? Colors.white : AppColors.primaryColor,
         ),

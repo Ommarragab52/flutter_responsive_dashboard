@@ -11,12 +11,7 @@ class SendMoneyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FilledButton(
       style: ButtonStyle(
-        padding: const WidgetStatePropertyAll(
-          EdgeInsets.symmetric(
-            vertical: 20,
-            horizontal: 75,
-          ),
-        ),
+        fixedSize: const WidgetStatePropertyAll(Size.fromHeight(50)),
         backgroundColor: const WidgetStatePropertyAll(
           AppColors.primaryColor,
         ),
@@ -29,7 +24,7 @@ class SendMoneyButton extends StatelessWidget {
       onPressed: () {},
       child: Text(
         'Send Money',
-        style: AppStyles.styleSemiBold18.copyWith(color: Colors.white),
+        style: AppStyles.styleSemiBold18(context).copyWith(color: Colors.white),
       ),
     );
   }
