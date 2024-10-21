@@ -2,7 +2,7 @@
 
 A modern, responsive, and adaptive Flutter dashboard that works seamlessly across mobile, tablet, and desktop platforms.
 
-## 📱 Features
+### 📱 Features
 
 - Fully responsive design that adapts to mobile, tablet, and desktop layouts
 - Adaptive widgets that optimize for different screen sizes
@@ -10,7 +10,7 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
 - Clean architecture with reusable components
 
 
-## 🛠️ Technical Implementation
+### 🛠️ Technical Implementation
 
 ### Responsive Design
 - Implements three distinct layouts:
@@ -66,13 +66,13 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
 - Adaptive containers
 - Platform-specific widgets
 
-## 📦 Packages Used
+### 📦 Packages Used
 
-### UI & Responsive Design
+#### UI & Responsive Design
 
 - device_preview:  For testing different device sizes and orientations
 
-- fl_chart: ^0.65.0 # Beautiful and responsive charts
+- fl_chart: for Beautiful and responsive charts
 
 ### 🎯 Key Features Implemented
 
