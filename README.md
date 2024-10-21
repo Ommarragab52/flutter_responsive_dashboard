@@ -1,4 +1,4 @@
-# Flutter Responsive & Adaptive Dashboard
+# Flutter Responsive & Adaptive Dashboard UI
 
 A modern, responsive, and adaptive Flutter dashboard that works seamlessly across mobile, tablet, and desktop platforms.
 
@@ -8,10 +8,7 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
 - Adaptive widgets that optimize for different screen sizes
 - Responsive typography and spacing
 - Clean architecture with reusable components
-- Transaction history tracking
-- Income/Expense management
-- Quick invoice generation
-- Card management system
+
 
 ## 🛠️ Technical Implementation
 
