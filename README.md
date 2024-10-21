@@ -46,17 +46,9 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
 
 - app_constants: Stores app-wide constants
 
-- size_config: Handles responsive breakpoints
+- size_config: Handles responsive breakpoints & Font size responsive
 
 - Responsive Implementation
-
-#### Breakpoints:
-
-- Mobile: < 800px
-
-- Tablet: < 1200px
-
-- Desktop: > 1200px
 
 
 #### Reusable Components
