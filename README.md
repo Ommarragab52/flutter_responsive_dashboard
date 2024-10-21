@@ -9,7 +9,6 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
 - Responsive typography and spacing
 - Clean architecture with reusable components
 
-
 ### 🛠️ Technical Implementation
 
 ### Responsive Design
@@ -29,27 +28,24 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
   - `FittedBox`
   - `Expanded`
   - `Flexible`
-#### Slivers
-- `SliverFillRemaining`
-- `SliverList`
-
+- Slivers for best performance
+  - `SliverList`
+  - `SliverFillRemaining`
 
 ### 📂 Project Structure
+
+
+![image](https://github.com/user-attachments/assets/538df710-4b69-45df-a89e-fb4c94c47f96)
+
 
 #### Core Utilities
 
 - app_assets: Manages all asset paths
-
 - app_styles: Contains text styles and themes
-
 - app_colors: Defines color palette
-
 - app_constants: Stores app-wide constants
-
 - size_config: Handles responsive breakpoints & Font size responsive
-
 - Responsive Implementation
-
 
 #### Reusable Components
 
@@ -76,21 +72,13 @@ Reusable widget architecture
 
 ### 🛠️ Built With
 
-- Flutter
-- Dart
-- Material Design
+- Flutter - Dart - Material Design
 
 ### 📱 Supported Platforms
 
-- Android
-- iOS
-- Web
-- Windows
-- macOS
-- Linux
+- Android - iOS - Web - Windows - macOS - Linux
 
 ### 📸 Screenshots
-
 
 | iPhone 12 pro max | Samsung A50 |
 |---------|--------|
