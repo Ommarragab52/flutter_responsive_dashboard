@@ -28,6 +28,7 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
   - `MediaQuery`
   - `LayoutBuilder`
   - `AspectRatio`
+  - `ConstrainedBox`
   - `FittedBox`
   - `Expanded`
   - `Flexible`
@@ -101,6 +102,8 @@ Reusable widget architecture
 - Linux
 
 ### 📸 Screenshots
+
+
 | iPhone 12 pro max | Samsung A50 |
 |---------|--------|
 |![iphone_12_pro_max](https://github.com/user-attachments/assets/b14060ec-1a91-46dc-8c05-a9bef4e8bb93)|![samsung_A50](https://github.com/user-attachments/assets/751a3e61-b159-4d64-b05e-72db8d01864a)|
