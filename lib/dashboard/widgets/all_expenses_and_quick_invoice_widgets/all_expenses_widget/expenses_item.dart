@@ -52,29 +52,32 @@ class _ExpensesItemState extends State<ExpensesItem> {
   }
 }
 
-Row buildItemHeader(ExpensesModel item, bool isSelected) {
+buildItemHeader(ExpensesModel item, bool isSelected) {
   return Row(
     children: [
-      CircleAvatar(
-          radius: 26,
-          backgroundColor: isSelected
-              ? Colors.white.withOpacity(0.1)
-              : Colors.black.withOpacity(0.02),
-          child: SvgPicture.asset(
-            item.image,
-            fit: BoxFit.scaleDown,
-            colorFilter: isSelected
-                ? const ColorFilter.mode(Colors.white, BlendMode.srcIn)
-                : const ColorFilter.mode(
-                    AppColors.primaryColor,
-                    BlendMode.srcIn,
-                  ),
-          )),
+      Flexible(
+        child: CircleAvatar(
+            radius: 32,
+            backgroundColor: isSelected
+                ? Colors.white.withOpacity(0.1)
+                : Colors.black.withOpacity(0.03),
+            child: SvgPicture.asset(
+              item.image,
+              colorFilter: isSelected
+                  ? const ColorFilter.mode(Colors.white, BlendMode.srcIn)
+                  : const ColorFilter.mode(
+                      AppColors.primaryColor,
+                      BlendMode.srcIn,
+                    ),
+            )),
+      ),
       const Spacer(),
-      Icon(
-        Icons.arrow_forward_ios_outlined,
-        color: isSelected ? Colors.white : AppColors.primaryTextColor,
-        size: 24,
+      Flexible(
+        child: Icon(
+          Icons.arrow_forward_ios_outlined,
+          color: isSelected ? Colors.white : AppColors.primaryTextColor,
+          size: 24,
+        ),
       )
     ],
   );
@@ -84,25 +87,37 @@ Column buildItemBody(context, ExpensesModel item, bool isSelected) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
-        item.expensesType,
-        style: AppStyles.styleSemiBold16(context).copyWith(
-          color: isSelected ? Colors.white : AppColors.primaryTextColor,
+      FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          item.expensesType,
+          style: AppStyles.styleSemiBold16(context).copyWith(
+            color: isSelected ? Colors.white : AppColors.primaryTextColor,
+          ),
         ),
       ),
       const SizedBox(height: 8),
-      Text(
-        item.date,
-        style: AppStyles.styleRegular14(context).copyWith(
-          color: isSelected ? Colors.white : AppColors.secondaryTextColor,
+      FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          item.date,
+          style: AppStyles.styleRegular14(context).copyWith(
+            color: isSelected ? Colors.white : AppColors.secondaryTextColor,
+          ),
         ),
       ),
       const SizedBox(height: 16),
-      Text(
-        item.amount,
-        style: AppStyles.styleSemiBold20(context).copyWith(
-          fontWeight: FontWeight.w600,
-          color: isSelected ? Colors.white : AppColors.primaryColor,
+      FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          item.amount,
+          style: AppStyles.styleSemiBold20(context).copyWith(
+            fontWeight: FontWeight.w600,
+            color: isSelected ? Colors.white : AppColors.primaryColor,
+          ),
         ),
       ),
     ],

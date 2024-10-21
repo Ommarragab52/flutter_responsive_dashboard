@@ -20,12 +20,17 @@ class DrawerItem extends StatelessWidget {
     return ListTile(
       minVerticalPadding: 20,
       contentPadding: EdgeInsets.zero,
-      title: Text(
-        drawerModel.title,
-        style: AppStyles.styleBold16(context).copyWith(
-          fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-          color:
-              isSelected ? AppColors.primaryColor : AppColors.primaryTextColor,
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerModel.title,
+          style: AppStyles.styleBold16(context).copyWith(
+            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+            color: isSelected
+                ? AppColors.primaryColor
+                : AppColors.primaryTextColor,
+          ),
         ),
       ),
       leading: SvgPicture.asset(drawerModel.icon),

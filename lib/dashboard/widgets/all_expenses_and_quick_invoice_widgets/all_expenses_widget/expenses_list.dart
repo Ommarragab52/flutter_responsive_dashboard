@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -18,33 +19,29 @@ class _ExpensesListState extends State<ExpensesList> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return ScrollConfiguration(
-      behavior: const ScrollBehavior()
-          .copyWith(dragDevices: {PointerDeviceKind.mouse}),
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: expensesItems.length,
-        itemBuilder: (BuildContext context, int index) =>
-            _buildExpensesItem(expensesItems[index], index),
-      ),
+    return Row(
+      children: expensesItems
+          .asMap()
+          .entries
+          .map((item) =>
+              Expanded(child: _buildExpensesItem(item.value, item.key)))
+          .toList(),
     );
   }
 
   Widget _buildExpensesItem(ExpensesModel item, int index) {
     final isSelected = selectedIndex == index;
     return Padding(
-      padding: EdgeInsets.only(left: index != 0 ? 12 : 0),
-      child: AspectRatio(
-        aspectRatio: 0.8,
-        child: ExpensesItem(
-          item: item,
-          isSelected: isSelected,
-          onClick: () {
-            setState(() {
-              selectedIndex = index;
-            });
-          },
-        ),
+      padding:
+          EdgeInsets.only(right: index == expensesItems.length - 1 ? 0 : 6),
+      child: ExpensesItem(
+        item: item,
+        isSelected: isSelected,
+        onClick: () {
+          setState(() {
+            selectedIndex = index;
+          });
+        },
       ),
     );
   }

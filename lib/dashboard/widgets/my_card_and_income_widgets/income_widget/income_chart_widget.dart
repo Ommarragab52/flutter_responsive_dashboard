@@ -11,7 +11,7 @@ class IncomeChartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.sizeOf(context).width;
-    if (width > SizeConfig.desktopBreakpoint && width < 1320) {
+    if (width > SizeConfig.desktopBreakpoint && width < 1360) {
       return const Row(
         children: [
           Spacer(),

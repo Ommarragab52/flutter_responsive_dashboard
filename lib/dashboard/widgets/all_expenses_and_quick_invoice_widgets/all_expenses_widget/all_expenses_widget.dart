@@ -19,7 +19,7 @@ class AllExpensesWidget extends StatelessWidget {
             dropdownMenuItems: dateItems,
           ),
           const SizedBox(height: 16),
-          const SizedBox(height: 230, child: ExpensesList()),
+          const ExpensesList(),
         ],
       ),
     );
