@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/dashboard/widgets/custom_drawer.dart';
-import 'package:flutter_dashboard/dashboard/widgets/mobile_layout.dart';
+import 'package:flutter_dashboard/dashboard/mobile/mobile_layout.dart';
 
 class TabletLayout extends StatelessWidget {
   const TabletLayout({super.key});

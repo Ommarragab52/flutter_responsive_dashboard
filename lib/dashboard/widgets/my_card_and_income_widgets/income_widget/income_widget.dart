@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/utils/app_colors.dart';
 import 'package:flutter_dashboard/core/utils/app_constants.dart';
 import 'package:flutter_dashboard/core/utils/app_styles.dart';
-import 'package:flutter_dashboard/core/widgets/custom_container.dart';
-import 'package:flutter_dashboard/core/widgets/custom_text_and_dropdown_menu_header_widget.dart';
+import 'package:flutter_dashboard/dashboard/widgets/custom_container.dart';
+import 'package:flutter_dashboard/dashboard/widgets/custom_text_and_dropdown_menu_header_widget.dart';
 import 'package:flutter_dashboard/dashboard/widgets/my_card_and_income_widgets/income_widget/income_chart_widget.dart';
 
 class IncomeWidget extends StatelessWidget {

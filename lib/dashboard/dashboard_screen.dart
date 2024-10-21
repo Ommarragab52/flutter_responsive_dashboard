@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/utils/app_colors.dart';
-import 'package:flutter_dashboard/core/widgets/adaptive_body_layout.dart';
+import 'package:flutter_dashboard/dashboard/widgets/adaptive_body_layout.dart';
 import 'package:flutter_dashboard/dashboard/widgets/custom_drawer.dart';
-import 'package:flutter_dashboard/dashboard/widgets/desktop_layout.dart';
-import 'package:flutter_dashboard/dashboard/widgets/mobile_layout.dart';
-import 'package:flutter_dashboard/dashboard/widgets/tablet_layout.dart';
+import 'package:flutter_dashboard/dashboard/desktop/desktop_layout.dart';
+import 'package:flutter_dashboard/dashboard/mobile/mobile_layout.dart';
+import 'package:flutter_dashboard/dashboard/tablet/tablet_layout.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});

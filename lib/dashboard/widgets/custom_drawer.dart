@@ -3,7 +3,7 @@ import 'package:flutter_dashboard/core/models/drawer_model.dart';
 import 'package:flutter_dashboard/core/models/user_info_model.dart';
 import 'package:flutter_dashboard/core/utils/app_assets.dart';
 import 'package:flutter_dashboard/core/utils/app_constants.dart';
-import 'package:flutter_dashboard/core/widgets/custom_profile_list_tile.dart';
+import 'package:flutter_dashboard/dashboard/widgets/custom_profile_list_tile.dart';
 import 'package:flutter_dashboard/dashboard/widgets/custom_drawer_widgets/drawer_item.dart';
 import 'package:flutter_dashboard/dashboard/widgets/custom_drawer_widgets/drawer_items_list.dart';
 

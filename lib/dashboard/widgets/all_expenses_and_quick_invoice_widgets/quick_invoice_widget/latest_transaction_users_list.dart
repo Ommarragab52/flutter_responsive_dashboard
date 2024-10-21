@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/models/user_info_model.dart';
 import 'package:flutter_dashboard/core/utils/app_assets.dart';
-import 'package:flutter_dashboard/core/widgets/custom_profile_list_tile.dart';
+import 'package:flutter_dashboard/dashboard/widgets/custom_profile_list_tile.dart';
 
 class LatestTransactionUsersList extends StatefulWidget {
   const LatestTransactionUsersList({super.key});

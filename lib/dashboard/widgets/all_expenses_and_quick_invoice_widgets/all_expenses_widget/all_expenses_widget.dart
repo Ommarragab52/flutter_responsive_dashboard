@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dashboard/core/utils/app_constants.dart';
-import 'package:flutter_dashboard/core/widgets/custom_text_and_dropdown_menu_header_widget.dart';
-import 'package:flutter_dashboard/core/widgets/custom_container.dart';
+import 'package:flutter_dashboard/dashboard/widgets/custom_text_and_dropdown_menu_header_widget.dart';
+import 'package:flutter_dashboard/dashboard/widgets/custom_container.dart';
 import 'package:flutter_dashboard/dashboard/widgets/all_expenses_and_quick_invoice_widgets/all_expenses_widget/expenses_list.dart';
 
 class AllExpensesWidget extends StatelessWidget {
