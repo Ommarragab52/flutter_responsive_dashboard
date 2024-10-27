@@ -1,19 +1,15 @@
-# Flutter Responsive & Adaptive Dashboard
+# Flutter Responsive & Adaptive Dashboard UI
 
 A modern, responsive, and adaptive Flutter dashboard that works seamlessly across mobile, tablet, and desktop platforms.
 
-## 📱 Features
+### 📱 Features
 
 - Fully responsive design that adapts to mobile, tablet, and desktop layouts
 - Adaptive widgets that optimize for different screen sizes
 - Responsive typography and spacing
 - Clean architecture with reusable components
-- Transaction history tracking
-- Income/Expense management
-- Quick invoice generation
-- Card management system
 
-## 🛠️ Technical Implementation
+### 🛠️ Technical Implementation
 
 ### Responsive Design
 - Implements three distinct layouts:
@@ -28,39 +24,28 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
   - `MediaQuery`
   - `LayoutBuilder`
   - `AspectRatio`
+  - `ConstrainedBox`
   - `FittedBox`
   - `Expanded`
   - `Flexible`
-
-### Sliver Implementation
-- `SliverFillRemaining`
-- `SliverList`
-- Custom sliver widgets for optimized scrolling
+- Slivers for best performance
+  - `SliverList`
+  - `SliverFillRemaining`
 
 ### 📂 Project Structure
+
+
+![image](https://github.com/user-attachments/assets/538df710-4b69-45df-a89e-fb4c94c47f96)
+
 
 #### Core Utilities
 
 - app_assets: Manages all asset paths
-
 - app_styles: Contains text styles and themes
-
 - app_colors: Defines color palette
-
 - app_constants: Stores app-wide constants
-
-- size_config: Handles responsive breakpoints
-
+- size_config: Handles responsive breakpoints & Font size responsive
 - Responsive Implementation
-
-#### Breakpoints:
-
-- Mobile: < 800px
-
-- Tablet: < 1200px
-
-- Desktop: > 1200px
-
 
 #### Reusable Components
 
@@ -69,13 +54,13 @@ A modern, responsive, and adaptive Flutter dashboard that works seamlessly acros
 - Adaptive containers
 - Platform-specific widgets
 
-## 📦 Packages Used
+### 📦 Packages Used
 
-### UI & Responsive Design
+#### UI & Responsive Design
 
 - device_preview:  For testing different device sizes and orientations
 
-- fl_chart: ^0.65.0 # Beautiful and responsive charts
+- fl_chart: for Beautiful and responsive charts
 
 ### 🎯 Key Features Implemented
 
@@ -87,20 +72,14 @@ Reusable widget architecture
 
 ### 🛠️ Built With
 
-- Flutter
-- Dart
-- Material Design
+- Flutter - Dart - Material Design
 
 ### 📱 Supported Platforms
 
-- Android
-- iOS
-- Web
-- Windows
-- macOS
-- Linux
+- Android - iOS - Web - Windows - macOS - Linux
 
 ### 📸 Screenshots
+
 | iPhone 12 pro max | Samsung A50 |
 |---------|--------|
 |![iphone_12_pro_max](https://github.com/user-attachments/assets/b14060ec-1a91-46dc-8c05-a9bef4e8bb93)|![samsung_A50](https://github.com/user-attachments/assets/751a3e61-b159-4d64-b05e-72db8d01864a)|
@@ -112,5 +91,8 @@ Reusable widget architecture
 | Desktop |
 |---------|
 |![mac_desktop](https://github.com/user-attachments/assets/a585b7e9-0a91-45f6-be17-7d20cdd245f3)|
+
+ https://github.com/user-attachments/assets/ccf51b95-5103-4aba-945b-e35b79e9bf60
+
 
 
