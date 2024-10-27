@@ -54,6 +54,7 @@ class _ExpensesItemState extends State<ExpensesItem> {
 
 buildItemHeader(ExpensesModel item, bool isSelected) {
   return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
       Flexible(
         child: CircleAvatar(
